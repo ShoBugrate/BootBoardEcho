@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BootBoardEcho™ Broadcast Studio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      background: url('https://www.transparenttextures.com/patterns/grass.png'), radial-gradient(circle at top left, #1e3c72, #2a5298);
+      background-size: cover;
+      background-attachment: fixed;
+      animation: floatBG 30s infinite alternate;
+    }
+    @keyframes floatBG {
+      0% { background-position: 0 0; }
+      100% { background-position: 200px 200px; }
+    }
+    header {
+      padding: 40px 20px;
+      text-align: center;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 30px #00ffcc;
+    }
+    header h1 {
+      font-size: 3em;
+      text-shadow: 2px 2px #00ffcc;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.1em;
+      color: #ccc;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(6px);
+      padding: 10px;
+      text-align: center;
+      z-index: 1000;
+    }
+    nav a {
+      color: #00ffcc;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      margin: 40px auto;
+      padding: 20px;
+      max-width: 800px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      box-shadow: 0 0 20px #00ffcc;
+    }
+    h2, h3 {
+      color: #00ffcc;
+      margin-bottom: 15px;
+    }
+    audio, video {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .ad-banner {
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2em;
+      padding: 20px;
+      border: 2px solid #00ffcc;
+      animation: pulseAd 5s infinite alternate;
+    }
+    @keyframes pulseAd {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.02); }
+    }
+    .tracklist ul {
+      list-style: none;
+      padding: 0;
+    }
+    .tracklist li {
+      margin-bottom: 10px;
+    }
+    .tracklist button {
+      background: rgba(0,255,204,0.2);
+      border: 1px solid #00ffcc;
+      color: #00ffcc;
+      padding: 6px 12px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      color: #fff;
+    }
+    th, td {
+      border: 1px solid #00ffcc;
+      padding: 8px;
+      text-align: center;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #00ffcc;
+      background: rgba(255,255,255,0.1);
+      color: #fff;
+    }
+    form button {
+      background: rgba(0,255,204,0.2);
+      font-weight: bold;
+      cursor: pointer;
+    }
+    footer {
+      background: rgba(0,0,0,0.9);
+      padding: 60px 20px 20px;
+      font-size: 0.95em;
+      text-align: center;
+    }
+    .whatsapp-link {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>BootBoardEcho™ Broadcast Studio</h1>
+    <p>SHOBUGRATE CREATION — The record is life. Your voice echoes through every field, every screen, every soul.</p>
+  </header>
+
+  <nav>
+    <a href="#player">Studio</a>
+    <a href="#tracklist">Tracklist</a>
+    <a href="#schedule">Schedule</a>
+    <a href="#summary">Summary</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="player">
+    <h2>🎙️ Now Playing: Episode 005</h2>
+    <audio controls autoplay>
+      <source src="media/audio/episode-005.wav" type="audio/wav" />
+    </audio>
+    <h2>🎥 Featured Video</h2>
+    <video controls poster="media/images/episode-005-cover.jpeg">
+      <source src="media/video/studio-launch.mp4" type="video/mp4" />
+    </video>
+  </section>
+
+  <section class="ad-banner">
+    💥 Advertise on BootBoardEcho™ — Reach developers, creators, and digital broadcasters. Contact: shobugrate@outlook.com | WhatsApp: 08098619221
+  </section>
+
+  <section id="tracklist" class="tracklist">
+    <h3>📂 Tracklist Archive</h3>
+    <ul>
+      <li>Episode 005 <button onclick="alert('Playing Episode 005')">Play</button></li>
+      <li>Episode 001 <button onclick="alert('Playing Episode 001')">Play</button></li>
+    </ul>
+  </section>
+
+  <section id="schedule">
+    <h3>📅 Broadcast Schedule</h3>
+    <table>
+      <tr><th>Time</th><th>Program</th></tr>
+      <tr><td>08:00</td><td>Morning Echo</td></tr>
+      <tr><td>12:00</td><td>Tech Talk</td></tr>
+      <tr><td>16:00</td><td>Music Flow</td></tr>
+      <tr><td>20:00</td><td>Studio Spotlight</td></tr>
+    </table>
+  </section>
+
+  <section id="summary">
+    <h3>🧠 AI Summary Placeholder</h3>
+    <p>This section will automatically generate intelligent summaries of each episode using AI. Future-ready for integration.</p>
+  </section>
+
+  <section class="analytics">
+    <h3>📈 Listener Analytics</h3>
+    <p>🟢 Live Listeners: <strong>128</strong></p>
+    <p>🌍 Top Region: <strong>Lagos, Nigeria</strong></p>
+    <p>⏱️ Average Listen Time: <strong>4m 32s</strong></p>
+  </section>
+
+  <section class="admin-dashboard">
+    <h3>🛠️ Admin Upload Dashboard</h3>
+    <form>
+      <input type="text" name="title" placeholder="Episode Title" />
+      <textarea name="description" placeholder="Episode Description"></textarea>
+      <input type="file" accept=".mp3,.mp4" />
+      <input type="file" accept=".jpg,.jpeg,.png" />
+      <button type="submit">Upload Episode</button>
+    </form>
+  </section>
+
+  <footer id="contact">
+    <h3>📜 Human Rights Logic</h3>
+    <p>This studio is built to empower voices, protect autonomy, and honor the right to speak freely.</p>
+    <p>SHOBUGRATE CREATION powered by Sancifex</p>
+    <p>Contact: <a href="mailto:shobugrate@outlook.com">shobugrate@outlook.com</a> | WhatsApp: 08098619221</p>
+    <a class="whatsapp-link" href="https://wa.me/2348098619221?text=🎧%20Listen%20to%20BootBoardEcho™%20Broadcast%20Studio%20now!%20Powered%20by%20SHOBUGRATE%20CREATION.%20Click%20to%20launch:%20https://yourusername.github.io/BootBoardEcho" target="_blank">📲 Share on WhatsApp[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/Ronnie434/30-days-of-React/tree/22142106cb46f717a1259f84227cc90ed7fe50cc/02_Day_Introduction_to_React%2F02_introduction_to_react.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054&citationId=1 "github.com")
